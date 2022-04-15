@@ -48,7 +48,7 @@
       header('Location: pages/dashboard.php');
     }
 
-    if (isset($_POST['button login'])) {
+    if (isset($_POST['button_login'])) {
       $loginSQL = "SELECT * FROM pengguna WHERE username='" . $_POST['username'] . "' AND password=MD5('" . $_POST['password'] . "')";
       include_once "database/database.php";
 
