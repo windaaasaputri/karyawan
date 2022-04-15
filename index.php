@@ -50,7 +50,11 @@
       $connection = $database->getConnection();
       $statement = $connection->prepare($loginSQL);
       $statement->execute();
-      
+      $row_count = $statement->rowCount();
+
+      if ($row_count > 0) {
+    ?>
+      }
     }
     <div class="form-floating">
       <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
